@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX-LAB QUEST - Personality Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="screen-home" class="screen active">
+            <header class="main-banner">
+                <div class="banner-ribbon">ENTER THE GAME KINGDOM</div>
+            </header>
+            <main class="home-content">
+                <p class="world-desc">IN THIS WORLD, EVERY GREAT GAME IS CREATED BY A TEAM.</p>
+                <div class="roles-preview">
+                    <span>Artists Create the World</span>
+                    <span>Product Managers Lead the Journey</span>
+                    <span>Engineers Build the System</span>
+                </div>
+                <h3>Let's discover your role!</h3>
+                <button id="btn-start" class="btn-primary">START</button>
+            </main>
+        </div>
+
+        <div id="screen-quiz" class="screen">
+            <div class="level-header">
+                <span id="level-indicator">LEVEL 1</span>
+                <h2 id="question-title">WHO WOULD YOU ATTACK FIRST?</h2>
+            </div>
+            
+            <div class="quiz-layout">
+                <div class="illustration-box">
+                    <img id="quest-img" src="placeholder.png" alt="Quest Illustration">
+                    <p id="scenario-text" class="scenario-desc">As the player moves forward, two enemies appear:</p>
+                </div>
+
+                <div class="options-container">
+                    <div class="tool-deck-header">Tool Deck</div>
+                    <div id="options-grid" class="options-grid">
+                        </div>
+                    <button id="btn-next" class="btn-secondary" disabled>NEXT</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-result" class="screen">
+            <header class="result-header">THE KINGDOM HAS CHOSEN</header>
+            <div class="result-card">
+                <p>You are the</p>
+                <h1 id="result-role">UNTRAINED DESIGNER</h1>
+                <div class="result-image">
+                    <div class="role-avatar-placeholder"></div>
+                </div>
+                <div class="result-details">
+                    <h3>STRENGTHS</h3>
+                    <ul id="result-strengths">
+                        </ul>
+                </div>
+                <button onclick="location.reload()" class="btn-primary">RETRY QUEST</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
