@@ -9,12 +9,10 @@
 body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
-    background-color: var(--bg-color);
+    background-image: url(assets/Landing page (1).png);
+    background-size: cover;
+    background-position: center;
     color: var(--text-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
 #game-container {
