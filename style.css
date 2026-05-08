@@ -110,3 +110,83 @@ body {
 .bg-l4 { background-color: #dcfce7; }
 .bg-l5 { background-color: #fae8ff; }
 .bg-l6 { background-color: #f1f5f9; }
+
+/* --- MOBILE RESPONSIVE (Untuk HP) --- */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Biarkan bisa di-scroll di HP */
+    }
+
+    #game-container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .screen {
+        height: auto;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    /* Landing Page HP */
+    .landing-top {
+        height: 35vh; /* Gambar lebih kecil di HP */
+    }
+
+    .landing-bottom {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .roles-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom memanjang ke bawah */
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-royal {
+        font-size: 1.5rem; /* Perkecil tombol sedikit agar muat */
+        padding: 10px 40px;
+    }
+
+    /* Quiz Screen HP */
+    .quiz-container {
+        padding: 20px 15px;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .quiz-body {
+        grid-template-columns: 1fr; /* Gambar di atas, tombol di bawah */
+        gap: 15px;
+    }
+
+    .illustration-placeholder {
+        height: 180px; /* Perkecil gambar ilustrasi */
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr 1fr; /* Tetap 2 kolom untuk kartu kecil */
+    }
+
+    /* Result Screen HP */
+    .result-main-card {
+        grid-template-columns: 1fr; /* Gambar di atas, teks di bawah */
+        padding: 40px 20px 20px;
+        gap: 20px;
+    }
+
+    .result-image-box {
+        height: 250px; /* Sesuaikan tinggi gambar hasil */
+    }
+
+    #result-role {
+        font-size: 2rem;
+    }
+
+    .result-header-label {
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+}

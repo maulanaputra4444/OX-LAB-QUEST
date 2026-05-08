@@ -102,21 +102,35 @@ function loadQuestion() {
     const grid = document.getElementById('options-grid');
     const infoText = document.getElementById('info-text');
     grid.innerHTML = '';
-    infoText.innerText = "Hover over a tool to see its description...";
+    infoText.innerText = "Tap a tool to see description, tap again to select.";
 
     q.options.forEach(opt => {
         const btn = document.createElement('div');
         btn.className = 'option-card';
         btn.innerHTML = `<img src="${opt.img}" class="option-img"><span>${opt.text}</span>`;
         
+        // Logic untuk Desktop (Hover)
         btn.onmouseenter = () => infoText.innerText = opt.desc;
         btn.onmouseleave = () => infoText.innerText = "Hover over a tool to see its description...";
         
+        // Logic untuk Mobile (Click/Tap)
         btn.onclick = () => {
-            opt.roles.forEach(r => scores[r]++);
-            currentStep++;
-            if (currentStep < questions.length) loadQuestion();
-            else showResult();
+            // Jika deskripsi yang tampil belum sama dengan opsi ini, tunjukkan dulu
+            if (infoText.innerText !== opt.desc) {
+                // Hapus highlight dari tombol lain
+                document.querySelectorAll('.option-card').forEach(c => c.style.borderColor = 'black');
+                // Beri highlight pada yang di-tap
+                btn.style.borderColor = 'var(--primary-blue)';
+                infoText.innerText = opt.desc;
+                infoText.style.color = "var(--primary-blue)";
+                infoText.style.fontWeight = "bold";
+            } else {
+                // Jika di-tap kedua kalinya (deskripsi sudah cocok), baru lanjut
+                opt.roles.forEach(r => scores[r]++);
+                currentStep++;
+                if (currentStep < questions.length) loadQuestion();
+                else showResult();
+            }
         };
         grid.appendChild(btn);
     });
