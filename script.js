@@ -1,163 +1,140 @@
 const questions = [
     {
-        level: "LEVEL 1",
-        title: "WHO WOULD YOU ATTACK FIRST?",
-        scenario: "As the player moves forward, two enemies appear:",
+        level: 1, bg: "bg-l1", title: "WHO WOULD YOU ATTACK FIRST?", scenario: "Two enemies appear: a giant golem and a quick sprite.",
         options: [
-            { text: "Attack the small enemy", roles: ["Engineer", "Artist"] },
-            { text: "Attack the big enemy", roles: ["PM", "Designer"] }
+            { text: "Small Enemy", roles: ["Engineer", "Artist"], desc: "A quick but fragile sprite. Requires precision to hit.", img: "https://via.placeholder.com/150?text=Small+Enemy" },
+            { text: "Big Enemy", roles: ["PM", "Designer"], desc: "A massive golem with high defense. Needs a tactical approach.", img: "https://via.placeholder.com/150?text=Big+Enemy" }
         ]
     },
     {
-        level: "LEVEL 2",
-        title: "CHOOSE YOUR TOOL CARD",
-        scenario: "After encountering the enemy, choose your tool:",
+        level: 2, bg: "bg-l2", title: "CHOOSE YOUR TOOL CARD", scenario: "Choose a card from the royal deck to defeat the foe.",
         options: [
-            { text: "Strategy Scroll", roles: ["PM"] },
-            { text: "Mechanic Trap", roles: ["Designer"] },
-            { text: "Illusion Strike", roles: ["Artist"] },
-            { text: "Code Blade", roles: ["Engineer"] }
+            { text: "Strategy Scroll", roles: ["PM"], desc: "Master the battlefield through meticulous planning.", img: "https://via.placeholder.com/150?text=Scroll" },
+            { text: "Game Blueprint", roles: ["Designer"], desc: "Understand the core mechanics to exploit weaknesses.", img: "https://via.placeholder.com/150?text=Blueprint" },
+            { text: "Magic Paintbrush", roles: ["Artist"], desc: "Alter the world's appearance to confuse the enemy.", img: "https://via.placeholder.com/150?text=Brush" },
+            { text: "Code Gauntlet", roles: ["Engineer"], desc: "Rewrite the logic of the fight to your advantage.", img: "https://via.placeholder.com/150?text=Gauntlet" }
         ]
     },
     {
-        level: "LEVEL 3",
-        title: "THE REMAINING ENEMY",
-        scenario: "The enemy that was ignored earlier returns stronger.",
+        level: 3, bg: "bg-l3", title: "THE REMAINING ENEMY", scenario: "The enemy you ignored earlier returns stronger.",
         options: [
-            { text: "Fight directly", roles: ["Engineer", "Artist"] },
-            { text: "Analyze and plan first", roles: ["PM", "Designer"] }
+            { text: "Fight directly", roles: ["Engineer", "Artist"], desc: "Face the challenge head-on with pure skill.", img: "https://via.placeholder.com/150?text=Fight" },
+            { text: "Analyze first", roles: ["PM", "Designer"], desc: "Observe patterns before making a move.", img: "https://via.placeholder.com/150?text=Analyze" }
         ]
     },
     {
-        level: "LEVEL 4",
-        title: "BROKEN BRIDGE",
-        scenario: "The player reaches a broken bridge. How to cross?",
+        level: 4, bg: "bg-l4", title: "BROKEN BRIDGE", scenario: "How do you cross the spiked bridge to reach the castle?",
         options: [
-            { text: "Bridge gear", roles: ["Engineer"] },
-            { text: "Path map", roles: ["Designer"] },
-            { text: "Magic brush", roles: ["Artist"] },
-            { text: "Command scroll", roles: ["PM"] }
+            { text: "System bridge", roles: ["Engineer"], desc: "Construct a bridge using pure system logic.", img: "https://via.placeholder.com/150?text=System" },
+            { text: "Alternate route", roles: ["Designer"], desc: "Find a hidden path through the level design.", img: "https://via.placeholder.com/150?text=Path" },
+            { text: "Illusion bridge", roles: ["Artist"], desc: "Create a bridge from light and color.", img: "https://via.placeholder.com/150?text=Illusion" },
+            { text: "Rebuild plan", roles: ["PM"], desc: "Organize resources to fix the original bridge.", img: "https://via.placeholder.com/150?text=Plan" }
         ]
     },
     {
-        level: "LEVEL 5",
-        title: "THE CHAOS BUG",
-        scenario: "The world glitches! How to handle the issue?",
+        level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.",
         options: [
-            { text: "Visual patch orb", roles: ["Artist"] },
-            { text: "Debug rune", roles: ["Engineer"] },
-            { text: "Priority Compass", roles: ["PM"] },
-            { text: "Mechanic adjuster", roles: ["Designer"] }
+            { text: "Debug Rune", roles: ["Engineer"], desc: "Erase the bug by correcting the world's source code.", img: "https://via.placeholder.com/150?text=Debug" },
+            { text: "Mechanic Adjuster", roles: ["Designer"], desc: "Tweak the gameplay mechanics to bypass the glitch.", img: "https://via.placeholder.com/150?text=Adjust" },
+            { text: "Visual Patch", roles: ["Artist"], desc: "Hide the glitch under a layer of beautiful textures.", img: "https://via.placeholder.com/150?text=Patch" },
+            { text: "Priority Compass", roles: ["PM"], desc: "Decide which parts of the world to save first.", img: "https://via.placeholder.com/150?text=Compass" }
         ]
     },
     {
-        level: "LEVEL 6",
-        title: "THE MISSING PIECE",
-        scenario: "Restore the missing component to open the gate.",
+        level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.",
         options: [
-            { text: "Restore Atmosphere (World Essence)", roles: ["Artist"] },
-            { text: "Puzzle key", roles: ["Designer"] },
-            { text: "System core", roles: ["Engineer"] },
-            { text: "Monster plan", roles: ["PM"] }
+            { text: "World Essence", roles: ["Artist"], desc: "Restore the atmosphere that awakens the gate.", img: "https://via.placeholder.com/150?text=Essence" },
+            { text: "Puzzle key", roles: ["Designer"], desc: "Unlock the logic behind the gate's lock.", img: "https://via.placeholder.com/150?text=Key" },
+            { text: "System core", roles: ["Engineer"], desc: "Restart the gate's internal power system.", img: "https://via.placeholder.com/150?text=Core" },
+            { text: "Master plan", roles: ["PM"], desc: "Provide the final command to open the way.", img: "https://via.placeholder.com/150?text=Master" }
         ]
     }
 ];
 
-const tieBreaker = {
-    title: "TIE BREAKER",
-    scenario: "Choose a tool you would bring into a game dev project:",
-    options: [
-        { text: "Planner", roles: ["PM"] },
-        { text: "Notebook", roles: ["Designer"] },
-        { text: "Laptop", roles: ["Engineer"] },
-        { text: "Drawing Tab", roles: ["Artist"] }
-    ]
+const roleData = {
+    Engineer: { 
+        tagline: "YOU BUILD THE WORLD'S LOGIC", 
+        desc: "Engineers transform complex ideas into functional systems, ensuring technical stability and excellence.",
+        strengths: ["Advanced Problem Solver", "System Optimization", "Logical Thinking"],
+        img: "https://via.placeholder.com/400x500?text=ENGINEER+ART"
+    },
+    Designer: { 
+        tagline: "YOU SHAPE HOW THE GAME IS PLAYED", 
+        desc: "Designers create gameplay mechanics, levels, and player experience through trial, error, and logic.",
+        strengths: ["Player Experience Focus", "Creative Mechanics", "Level Architecture"],
+        img: "https://via.placeholder.com/400x500?text=DESIGNER+ART"
+    },
+    Artist: { 
+        tagline: "YOU CREATE THE ATMOSPHERE", 
+        desc: "Artists bring the kingdom to life through immersive visuals, colors, and creative world-building.",
+        strengths: ["Visual Storytelling", "Aesthetic Immersion", "Creative Direction"],
+        img: "https://via.placeholder.com/400x500?text=ARTIST+ART"
+    },
+    PM: { 
+        tagline: "YOU LEAD THE JOURNEY", 
+        desc: "Product Managers oversee the master plan, prioritizing features and guiding the team to the finish line.",
+        strengths: ["Strategic Leadership", "Project Management", "Team Visionary"],
+        img: "https://via.placeholder.com/400x500?text=PM+ART"
+    }
 };
 
 let currentStep = 0;
 let scores = { Engineer: 0, Designer: 0, Artist: 0, PM: 0 };
-let selectedRoleInCurrentStep = null;
 
-// DOM Elements
-const btnStart = document.getElementById('btn-start');
-const btnNext = document.getElementById('btn-next');
-const screens = {
-    home: document.getElementById('screen-home'),
-    quiz: document.getElementById('screen-quiz'),
-    result: document.getElementById('screen-result')
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const btnStart = document.getElementById('btn-start');
+    if (btnStart) {
+        btnStart.addEventListener('click', () => {
+            document.getElementById('screen-home').classList.remove('active');
+            document.getElementById('screen-quiz').classList.add('active');
+            loadQuestion();
+        });
+    }
+});
 
-btnStart.onclick = () => {
-    screens.home.classList.remove('active');
-    screens.quiz.classList.add('active');
-    renderQuestion();
-};
-
-function renderQuestion() {
-    const q = (currentStep < 6) ? questions[currentStep] : tieBreaker;
-    document.getElementById('level-indicator').innerText = q.level || "FINAL STEP";
+function loadQuestion() {
+    const q = questions[currentStep];
+    document.body.className = q.bg;
+    document.getElementById('level-tag').innerText = `LEVEL ${q.level}`;
     document.getElementById('question-title').innerText = q.title;
     document.getElementById('scenario-text').innerText = q.scenario;
-    
+
     const grid = document.getElementById('options-grid');
+    const infoText = document.getElementById('info-text');
     grid.innerHTML = '';
-    btnNext.disabled = true;
+    infoText.innerText = "Hover over a tool to see its description...";
 
     q.options.forEach(opt => {
-        const div = document.createElement('div');
-        div.className = 'option-card';
-        div.innerText = opt.text;
-        div.onclick = () => {
-            document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-            div.classList.add('selected');
-            selectedRoleInCurrentStep = opt.roles;
-            btnNext.disabled = false;
+        const btn = document.createElement('div');
+        btn.className = 'option-card';
+        btn.innerHTML = `<img src="${opt.img}" class="option-img"><span>${opt.text}</span>`;
+        
+        btn.onmouseenter = () => infoText.innerText = opt.desc;
+        btn.onmouseleave = () => infoText.innerText = "Hover over a tool to see its description...";
+        
+        btn.onclick = () => {
+            opt.roles.forEach(r => scores[r]++);
+            currentStep++;
+            if (currentStep < questions.length) loadQuestion();
+            else showResult();
         };
-        grid.appendChild(div);
+        grid.appendChild(btn);
     });
 }
 
-btnNext.onclick = () => {
-    // Tambah poin
-    selectedRoleInCurrentStep.forEach(r => scores[r]++);
-    currentStep++;
+function showResult() {
+    document.getElementById('screen-quiz').classList.remove('active');
+    document.getElementById('screen-result').classList.add('active');
+    document.body.className = '';
 
-    if (currentStep < 6) {
-        renderQuestion();
-    } else if (currentStep === 6) {
-        checkResult();
-    } else {
-        showFinalResult();
-    }
-};
+    const winner = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+    const data = roleData[winner];
 
-function checkResult() {
-    const maxScore = Math.max(...Object.values(scores));
-    const winners = Object.keys(scores).filter(role => scores[role] === maxScore);
+    document.getElementById('result-role').innerText = winner === "PM" ? "PRODUCT MANAGER" : winner.toUpperCase();
+    document.getElementById('result-tagline').innerText = data.tagline;
+    document.getElementById('result-desc').innerText = data.desc;
+    document.getElementById('result-img').src = data.img;
 
-    if (winners.length > 1) {
-        renderQuestion(); // Tampilkan Tie Breaker
-    } else {
-        showFinalResult(winners[0]);
-    }
-}
-
-function showFinalResult(winner) {
-    // Jika lewat tie breaker, tentukan pemenang terbaru
-    const finalWinner = winner || Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
-    
-    screens.quiz.classList.remove('active');
-    screens.result.classList.add('active');
-    
-    document.getElementById('result-role').innerText = finalWinner.toUpperCase();
-    
-    const strengths = {
-        Designer: ["Understands basic gameplay flow", "Experiments with simple mechanics", "Learns from trial and error"],
-        Engineer: ["System logic expert", "Debugs complex issues", "Builds stable foundations"],
-        Artist: ["Visual world creator", "Focuses on aesthetics", "Brings imagination to life"],
-        PM: ["Leads the journey", "Prioritizes key features", "Manages the master plan"]
-    };
-
-    const list = document.getElementById('result-strengths');
-    list.innerHTML = strengths[finalWinner].map(s => `<li>${s}</li>`).join('');
+    const strengthsList = document.getElementById('result-strengths');
+    strengthsList.innerHTML = data.strengths.map(s => `<li>${s}</li>`).join('');
 }

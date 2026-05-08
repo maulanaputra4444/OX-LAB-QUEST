@@ -3,65 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OX-LAB QUEST - Personality Quiz</title>
+    <title>OX-LAB QUEST</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="bg-home">
+
     <div id="game-container">
+        
         <div id="screen-home" class="screen active">
-            <header class="main-banner">
-                <div class="banner-ribbon">ENTER THE GAME KINGDOM</div>
-            </header>
-            <main class="home-content">
-                <p class="world-desc">IN THIS WORLD, EVERY GREAT GAME IS CREATED BY A TEAM.</p>
-                <div class="roles-preview">
-                    <span>Artists Create the World</span>
-                    <span>Product Managers Lead the Journey</span>
-                    <span>Engineers Build the System</span>
+            <div class="landing-top"></div>
+            <div class="landing-bottom">
+                <p class="team-statement">IN THIS WORLD, EVERY GREAT GAME IS CREATED BY A TEAM.</p>
+                <div class="roles-grid">
+                    <div class="role-item">
+                        <div class="role-img-placeholder"><i class="fa-solid fa-paintbrush"></i></div>
+                        <div class="role-text">Artists Create the World</div>
+                    </div>
+                    <div class="role-item">
+                        <div class="role-img-placeholder"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="role-text">Engineers Build the System</div>
+                    </div>
+                    <div class="role-item">
+                        <div class="role-img-placeholder"><i class="fa-solid fa-compass"></i></div>
+                        <div class="role-text">Product Managers Lead the Journey</div>
+                    </div>
+                    <div class="role-item">
+                        <div class="role-img-placeholder"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="role-text">Designers Craft Gameplay</div>
+                    </div>
                 </div>
-                <h3>Let's discover your role!</h3>
-                <button id="btn-start" class="btn-primary">START</button>
-            </main>
+                <div class="cta-area">
+                    <p class="cta-label">Let's discover your role!</p>
+                    <button id="btn-start" class="btn-royal">start</button>
+                </div>
+            </div>
         </div>
 
         <div id="screen-quiz" class="screen">
-            <div class="level-header">
-                <span id="level-indicator">LEVEL 1</span>
-                <h2 id="question-title">WHO WOULD YOU ATTACK FIRST?</h2>
-            </div>
-            
-            <div class="quiz-layout">
-                <div class="illustration-box">
-                    <img id="quest-img" src="placeholder.png" alt="Quest Illustration">
-                    <p id="scenario-text" class="scenario-desc">As the player moves forward, two enemies appear:</p>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <span id="level-tag">LEVEL 1</span>
+                    <h2 id="question-title">QUESTION</h2>
                 </div>
+                
+                <div class="quiz-body">
+                    <div class="illustration-placeholder">
+                        <p id="scenario-text">Scenario description...</p>
+                    </div>
 
-                <div class="options-container">
-                    <div class="tool-deck-header">Tool Deck</div>
-                    <div id="options-grid" class="options-grid">
+                    <div class="options-wrapper">
+                        <div class="deck-header">Tool Deck</div>
+                        <div id="options-grid" class="options-grid"></div>
+                        
+                        <div class="description-box">
+                            <p id="info-text">Hover over a tool to see its description...</p>
                         </div>
-                    <button id="btn-next" class="btn-secondary" disabled>NEXT</button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="screen-result" class="screen">
-            <header class="result-header">THE KINGDOM HAS CHOSEN</header>
-            <div class="result-card">
-                <p>You are the</p>
-                <h1 id="result-role">UNTRAINED DESIGNER</h1>
-                <div class="result-image">
-                    <div class="role-avatar-placeholder"></div>
+            <div class="result-wrapper">
+                <div class="result-header-label">THE KINGDOM HAS CHOSEN</div>
+                
+                <div class="result-main-card">
+                    <div class="result-left">
+                        <div class="result-image-box">
+                            <img id="result-img" src="" alt="Role Illustration">
+                        </div>
+                    </div>
+
+                    <div class="result-right">
+                        <p class="res-intro">You are the</p>
+                        <h1 id="result-role">ROLE NAME</h1>
+                        <h2 id="result-tagline">TAGLINE</h2>
+                        <p id="result-desc">Description of the role goes here.</p>
+                        
+                        <div class="strengths-box">
+                            <h3>STRENGTHS</h3>
+                            <ul id="result-strengths">
+                                </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="result-details">
-                    <h3>STRENGTHS</h3>
-                    <ul id="result-strengths">
-                        </ul>
+
+                <div class="result-footer">
+                    <button onclick="location.reload()" class="btn-royal">RETRY QUEST</button>
                 </div>
-                <button onclick="location.reload()" class="btn-primary">RETRY QUEST</button>
             </div>
         </div>
+
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
