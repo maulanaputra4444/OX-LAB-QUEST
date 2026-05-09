@@ -39,7 +39,7 @@ body {
 .landing-top {
     height: 60vh; /* Menggunakan vh agar konsisten mengikuti tinggi layar */
     width: 100%;
-    background-image: url('assets/intro.jpg'); 
+    background-image: url('assets/intro3.png'); 
     background-size: cover;      /* Memastikan gambar menutupi seluruh area tanpa gepeng */
     background-position: center top; /* Memastikan pusat gambar (kastil) tetap di tengah */
     background-repeat: no-repeat;
