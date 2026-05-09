@@ -208,9 +208,7 @@ body {
         gap: 20px;
     }
 
-    .result-image-box {
-        height: 250px; /* Sesuaikan tinggi gambar hasil */
-    }
+
 
     #result-role {
         font-size: 2rem;
