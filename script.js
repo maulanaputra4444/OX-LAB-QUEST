@@ -34,19 +34,19 @@ const questions = [
     {
         level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.", image: "assets/qs5.png",
         options: [
-            { text: "Debug Rune", roles: ["Engineer"], desc: "Erase the bug by correcting the world's source code.", img: "https://via.placeholder.com/150?text=Debug" },
-            { text: "Mechanic Adjuster", roles: ["Designer"], desc: "Tweak the gameplay mechanics to bypass the glitch.", img: "https://via.placeholder.com/150?text=Adjust" },
-            { text: "Visual Patch", roles: ["Artist"], desc: "Hide the glitch under a layer of beautiful textures.", img: "https://via.placeholder.com/150?text=Patch" },
-            { text: "Priority Compass", roles: ["PM"], desc: "Decide which parts of the world to save first.", img: "https://via.placeholder.com/150?text=Compass" }
+            { text: "Debug Rune", roles: ["Engineer"], desc: "Erase the bug by correcting the world's source code.", img: "assets/rune.png" },
+            { text: "Mechanic Adjuster", roles: ["Designer"], desc: "Tweak the gameplay mechanics to bypass the glitch.", img: "assets/gir.png" },
+            { text: "Visual Patch", roles: ["Artist"], desc: "Hide the glitch under a layer of beautiful textures.", img: "assets/dajjal.png" },
+            { text: "Priority Compass", roles: ["PM"], desc: "Decide which parts of the world to save first.", img: "assets/kompas.png" }
         ]
     },
     {
         level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.", image: "assets/qs6.png",
         options: [
-            { text: "World Essence", roles: ["Artist"], desc: "Restore the atmosphere that awakens the gate.", img: "https://via.placeholder.com/150?text=Essence" },
-            { text: "Puzzle key", roles: ["Designer"], desc: "Unlock the logic behind the gate's lock.", img: "https://via.placeholder.com/150?text=Key" },
-            { text: "System core", roles: ["Engineer"], desc: "Restart the gate's internal power system.", img: "https://via.placeholder.com/150?text=Core" },
-            { text: "Master plan", roles: ["PM"], desc: "Provide the final command to open the way.", img: "https://via.placeholder.com/150?text=Master" }
+            { text: "World Essence", roles: ["Artist"], desc: "Restore the atmosphere that awakens the gate.", img: "assets/potion.png" },
+            { text: "Puzzle key", roles: ["Designer"], desc: "Unlock the logic behind the gate's lock.", img: "assets/puzzle.png" },
+            { text: "System core", roles: ["Engineer"], desc: "Restart the gate's internal power system.", img: "assets/chip.png" },
+            { text: "Master plan", roles: ["PM"], desc: "Provide the final command to open the way.", img: "assets/master.png" }
         ]
     }
 ];
