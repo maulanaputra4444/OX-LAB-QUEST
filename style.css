@@ -40,7 +40,8 @@ body {
     height: 60vh; /* Menggunakan vh agar konsisten mengikuti tinggi layar */
     width: 100%;
     background-image: url('assets/intro.jpg'); 
-    background-size: cover;      /* Memastikan gambar menutupi seluruh area tanpa gepeng */ /* Memastikan pusat gambar (kastil) tetap di tengah */
+    background-size: cover;      /* Memastikan gambar menutupi seluruh area tanpa gepeng */
+    background-position: center top; /* Memastikan pusat gambar (kastil) tetap di tengah */
     background-repeat: no-repeat;
     border-bottom: 8px solid var(--accent-gold);
 }
