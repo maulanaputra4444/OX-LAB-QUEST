@@ -7,32 +7,32 @@ const questions = [
         ]
     },
     {
-        level: 2, bg: "bg-l2", title: "CHOOSE YOUR TOOL CARD", scenario: "Choose a card from the royal deck to defeat the foe.", image: "assets/intro.jpg",
+        level: 2, bg: "bg-l2", title: "CHOOSE YOUR TOOL CARD", scenario: "Choose a card from the royal deck to defeat the foe.", image: "assets/qs2.png",
         options: [
-            { text: "Strategy Scroll", roles: ["PM"], desc: "Master the battlefield through meticulous planning.", img: "https://via.placeholder.com/150?text=Scroll" },
-            { text: "Game Blueprint", roles: ["Designer"], desc: "Understand the core mechanics to exploit weaknesses.", img: "https://via.placeholder.com/150?text=Blueprint" },
-            { text: "Magic Paintbrush", roles: ["Artist"], desc: "Alter the world's appearance to confuse the enemy.", img: "https://via.placeholder.com/150?text=Brush" },
-            { text: "Code Gauntlet", roles: ["Engineer"], desc: "Rewrite the logic of the fight to your advantage.", img: "https://via.placeholder.com/150?text=Gauntlet" }
+            { text: "Strategy Scroll", roles: ["PM"], desc: "Master the battlefield through meticulous planning.", img: "assets/scroll.png" },
+            { text: "Mechanic Trap", roles: ["Designer"], desc: "Understand the core mechanics to exploit weaknesses.", img: "assets/trap.png" },
+            { text: "Illusion Strike", roles: ["Artist"], desc: "Alter the world's appearance to confuse the enemy.", img: "assets/illusion strike.png" },
+            { text: "Code Blade", roles: ["Engineer"], desc: "Rewrite the logic of the fight to your advantage.", img: "assets/code.png" }
         ]
     },
     {
-        level: 3, bg: "bg-l3", title: "THE REMAINING ENEMY", scenario: "The enemy you ignored earlier returns stronger.", image: "assets/bg.jpg",
+        level: 3, bg: "bg-l3", title: "THE REMAINING ENEMY", scenario: "The enemy you ignored earlier returns stronger.", image: "assets/qs3.png",
         options: [
-            { text: "Fight directly", roles: ["Engineer", "Artist"], desc: "Face the challenge head-on with pure skill.", img: "https://via.placeholder.com/150?text=Fight" },
-            { text: "Analyze first", roles: ["PM", "Designer"], desc: "Observe patterns before making a move.", img: "https://via.placeholder.com/150?text=Analyze" }
+            { text: "Fight directly", roles: ["Engineer", "Artist"], desc: "Face the challenge head-on with pure skill.", img: "assets/bow.png" },
+            { text: "Analyze first", roles: ["PM", "Designer"], desc: "Observe patterns before making a move.", img: "assets/clipboard.png" }
         ]
     },
     {
-        level: 4, bg: "bg-l4", title: "BROKEN BRIDGE", scenario: "How do you cross the spiked bridge to reach the castle?", image: "assets/mob 1.png",
+        level: 4, bg: "bg-l4", title: "BROKEN BRIDGE", scenario: "How do you cross the spiked bridge to reach the castle?", image: "assets/qs4.png",
         options: [
-            { text: "System bridge", roles: ["Engineer"], desc: "Construct a bridge using pure system logic.", img: "https://via.placeholder.com/150?text=System" },
-            { text: "Alternate route", roles: ["Designer"], desc: "Find a hidden path through the level design.", img: "https://via.placeholder.com/150?text=Path" },
-            { text: "Illusion bridge", roles: ["Artist"], desc: "Create a bridge from light and color.", img: "https://via.placeholder.com/150?text=Illusion" },
-            { text: "Rebuild plan", roles: ["PM"], desc: "Organize resources to fix the original bridge.", img: "https://via.placeholder.com/150?text=Plan" }
+            { text: "Bridge Gear", roles: ["Engineer"], desc: "Construct a bridge using pure system logic.", img: "assets/wrench.png" },
+            { text: "Path Map", roles: ["Designer"], desc: "Find a hidden path through the level design.", img: "assets/map.png" },
+            { text: "Illusion bridge", roles: ["Artist"], desc: "Create a bridge from light and color.", img: "assets/brush.png" },
+            { text: "Command Scroll", roles: ["PM"], desc: "Organize resources to fix the original bridge.", img: "assets/scroll1.png" }
         ]
     },
     {
-        level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.", image: "assets/mob 2.png",
+        level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.", image: "assets/qs5.png",
         options: [
             { text: "Debug Rune", roles: ["Engineer"], desc: "Erase the bug by correcting the world's source code.", img: "https://via.placeholder.com/150?text=Debug" },
             { text: "Mechanic Adjuster", roles: ["Designer"], desc: "Tweak the gameplay mechanics to bypass the glitch.", img: "https://via.placeholder.com/150?text=Adjust" },
@@ -41,7 +41,7 @@ const questions = [
         ]
     },
     {
-        level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.", image: "assets/pm.jpg",
+        level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.", image: "assets/qs6.png",
         options: [
             { text: "World Essence", roles: ["Artist"], desc: "Restore the atmosphere that awakens the gate.", img: "https://via.placeholder.com/150?text=Essence" },
             { text: "Puzzle key", roles: ["Designer"], desc: "Unlock the logic behind the gate's lock.", img: "https://via.placeholder.com/150?text=Key" },
