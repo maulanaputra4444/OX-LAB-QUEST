@@ -1,13 +1,13 @@
 const questions = [
     {
-        level: 1, bg: "bg-l1", title: "WHO WOULD YOU ATTACK FIRST?", scenario: "Two enemies appear: a giant golem and a quick sprite.",
+        level: 1, bg: "bg-l1", title: "WHO WOULD YOU ATTACK FIRST?", scenario: "Two enemies appear: a giant golem and a quick sprite.", image: "assets/castle.jpg",
         options: [
-            { text: "Small Enemy", roles: ["Engineer", "Artist"], desc: "A quick but fragile sprite. Requires precision to hit.", img: "https://via.placeholder.com/150?text=Small+Enemy" },
-            { text: "Big Enemy", roles: ["PM", "Designer"], desc: "A massive golem with high defense. Needs a tactical approach.", img: "https://via.placeholder.com/150?text=Big+Enemy" }
+            { text: "Small Enemy", roles: ["Engineer", "Artist"], desc: "A quick but fragile sprite. Requires precision to hit.", img: "assets/mob 2.png" },
+            { text: "Big Enemy", roles: ["PM", "Designer"], desc: "A massive golem with high defense. Needs a tactical approach.", img: "assets/mob 1.png" }
         ]
     },
     {
-        level: 2, bg: "bg-l2", title: "CHOOSE YOUR TOOL CARD", scenario: "Choose a card from the royal deck to defeat the foe.",
+        level: 2, bg: "bg-l2", title: "CHOOSE YOUR TOOL CARD", scenario: "Choose a card from the royal deck to defeat the foe.", image: "assets/intro.jpg",
         options: [
             { text: "Strategy Scroll", roles: ["PM"], desc: "Master the battlefield through meticulous planning.", img: "https://via.placeholder.com/150?text=Scroll" },
             { text: "Game Blueprint", roles: ["Designer"], desc: "Understand the core mechanics to exploit weaknesses.", img: "https://via.placeholder.com/150?text=Blueprint" },
@@ -16,14 +16,14 @@ const questions = [
         ]
     },
     {
-        level: 3, bg: "bg-l3", title: "THE REMAINING ENEMY", scenario: "The enemy you ignored earlier returns stronger.",
+        level: 3, bg: "bg-l3", title: "THE REMAINING ENEMY", scenario: "The enemy you ignored earlier returns stronger.", image: "assets/bg.jpg",
         options: [
             { text: "Fight directly", roles: ["Engineer", "Artist"], desc: "Face the challenge head-on with pure skill.", img: "https://via.placeholder.com/150?text=Fight" },
             { text: "Analyze first", roles: ["PM", "Designer"], desc: "Observe patterns before making a move.", img: "https://via.placeholder.com/150?text=Analyze" }
         ]
     },
     {
-        level: 4, bg: "bg-l4", title: "BROKEN BRIDGE", scenario: "How do you cross the spiked bridge to reach the castle?",
+        level: 4, bg: "bg-l4", title: "BROKEN BRIDGE", scenario: "How do you cross the spiked bridge to reach the castle?", image: "assets/mob 1.png",
         options: [
             { text: "System bridge", roles: ["Engineer"], desc: "Construct a bridge using pure system logic.", img: "https://via.placeholder.com/150?text=System" },
             { text: "Alternate route", roles: ["Designer"], desc: "Find a hidden path through the level design.", img: "https://via.placeholder.com/150?text=Path" },
@@ -32,7 +32,7 @@ const questions = [
         ]
     },
     {
-        level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.",
+        level: 5, bg: "bg-l5", title: "THE CHAOS BUG", scenario: "The world is glitching! Fix it before the kingdom crashes.", image: "assets/mob 2.png",
         options: [
             { text: "Debug Rune", roles: ["Engineer"], desc: "Erase the bug by correcting the world's source code.", img: "https://via.placeholder.com/150?text=Debug" },
             { text: "Mechanic Adjuster", roles: ["Designer"], desc: "Tweak the gameplay mechanics to bypass the glitch.", img: "https://via.placeholder.com/150?text=Adjust" },
@@ -41,7 +41,7 @@ const questions = [
         ]
     },
     {
-        level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.",
+        level: 6, bg: "bg-l6", title: "THE MISSING PIECE", scenario: "Restore the component to open the final gate.", image: "assets/pm.jpg",
         options: [
             { text: "World Essence", roles: ["Artist"], desc: "Restore the atmosphere that awakens the gate.", img: "https://via.placeholder.com/150?text=Essence" },
             { text: "Puzzle key", roles: ["Designer"], desc: "Unlock the logic behind the gate's lock.", img: "https://via.placeholder.com/150?text=Key" },
@@ -56,25 +56,25 @@ const roleData = {
         tagline: "YOU BUILD THE WORLD'S LOGIC", 
         desc: "Engineers transform complex ideas into functional systems, ensuring technical stability and excellence.",
         strengths: ["Advanced Problem Solver", "System Optimization", "Logical Thinking"],
-        img: "https://via.placeholder.com/400x500?text=ENGINEER+ART"
+        img: "assets/engineer.jpg" // Ganti dengan gambar yang sesuai
     },
     Designer: { 
         tagline: "YOU SHAPE HOW THE GAME IS PLAYED", 
         desc: "Designers create gameplay mechanics, levels, and player experience through trial, error, and logic.",
         strengths: ["Player Experience Focus", "Creative Mechanics", "Level Architecture"],
-        img: "https://via.placeholder.com/400x500?text=DESIGNER+ART"
+        img: "assets/designer.jpg" // Ganti dengan gambar yang sesuai
     },
     Artist: { 
         tagline: "YOU CREATE THE ATMOSPHERE", 
         desc: "Artists bring the kingdom to life through immersive visuals, colors, and creative world-building.",
         strengths: ["Visual Storytelling", "Aesthetic Immersion", "Creative Direction"],
-        img: "https://via.placeholder.com/400x500?text=ARTIST+ART"
+        img: "assets/artist.jpg" // Ganti dengan gambar yang sesuai
     },
     PM: { 
         tagline: "YOU LEAD THE JOURNEY", 
         desc: "Product Managers oversee the master plan, prioritizing features and guiding the team to the finish line.",
         strengths: ["Strategic Leadership", "Project Management", "Team Visionary"],
-        img: "https://via.placeholder.com/400x500?text=PM+ART"
+        img: "assets/pm.jpg" // Ganti dengan gambar yang sesuai
     }
 };
 
@@ -98,6 +98,12 @@ function loadQuestion() {
     document.getElementById('level-tag').innerText = `LEVEL ${q.level}`;
     document.getElementById('question-title').innerText = q.title;
     document.getElementById('scenario-text').innerText = q.scenario;
+
+    const illustration = document.getElementById('illustration-image');
+    if (illustration && q.image) {
+        illustration.src = q.image;
+        illustration.alt = `${q.title} illustration`;
+    }
 
     const grid = document.getElementById('options-grid');
     const infoText = document.getElementById('info-text');
