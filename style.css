@@ -163,7 +163,7 @@ body {
     /* Landing Page HP */
     .landing-top {
         height: 60vh; /* Gambar lebih kecil di HP */
-        background-position: center 10%;
+        background-position: bottom;
 
     }
 
