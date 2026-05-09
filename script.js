@@ -1,6 +1,6 @@
 const questions = [
     {
-        level: 1, bg: "bg-l1", title: "WHO WOULD YOU ATTACK FIRST?", scenario: "Two enemies appear: a giant golem and a quick sprite.", image: "assets/qs1.png",
+        level: 1, bg: "bg-l1", title: "WHO WOULD YOU ATTACK FIRST?", scenario: "Two enemies appear: a giant golem and a quick sprite.", image: "assets/qs1.png" ,
         options: [
             { text: "Small Enemy", roles: ["Engineer", "Artist"], desc: "A quick but fragile sprite. Requires precision to hit.", img: "assets/mob 2.png" },
             { text: "Big Enemy", roles: ["PM", "Designer"], desc: "A massive golem with high defense. Needs a tactical approach.", img: "assets/mob 1.png" }
